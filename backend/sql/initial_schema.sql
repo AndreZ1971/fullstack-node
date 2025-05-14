@@ -1,9 +1,9 @@
 -- filepath: backend/sql/initial_schema.sql
 CREATE TABLE IF NOT EXISTS notes (
-    id SERIAL PRIMARY KEY,
-    text_content TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  id SERIAL PRIMARY KEY,
+  text_content TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
 );
 
 -- Optional: Eine Funktion und ein Trigger, um updated_at automatisch zu aktualisieren
